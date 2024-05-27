@@ -17,9 +17,9 @@ Ultimately this means I can completely lock down the network access to PaaS reso
 
 # Deploy
 
-`terraform plan --out=plan.tfplan --var-file=secrets.tfvars`<br/>
+`terraform plan --out=plan.tfplan`<br/>
 `terraform apply "plan.tfplan"`
 
 # Destroy
 
-`terraform destroy --var-file=secrets.tfvars`
+`terraform destroy`

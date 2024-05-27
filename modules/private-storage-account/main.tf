@@ -75,8 +75,8 @@ data "azurerm_storage_account_sas" "this" {
 
   resource_types {
     service   = true
-    container = false
-    object    = false
+    container = true
+    object    = true
   }
 
   services {
@@ -87,15 +87,15 @@ data "azurerm_storage_account_sas" "this" {
   }
 
   start  = "2024-01-01T00:00:00Z"
-  expiry = "2025-01-01T00:00:00Z"
+  expiry = "2034-01-01T00:00:00Z"
 
   permissions {
     read    = true
     write   = true
     delete  = false
-    list    = true
-    add     = true
-    create  = true
+    list    = false
+    add     = false
+    create  = false
     update  = false
     process = false
     tag     = false
